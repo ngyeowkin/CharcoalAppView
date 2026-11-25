@@ -1,0 +1,23 @@
+/* Top bar, sign-in and Team page — the parts Vue draws around the Charcoal Run screens */
+.top-right { margin-left: auto; display: flex; align-items: center; gap: 8px; flex-wrap: wrap }
+.top .seg { margin-left: 0 }
+.tny-btn { padding: 5px 10px; font-size: 13px; text-decoration: none }
+.who-me { font-size: 13px; color: var(--ink2); font-weight: 600 }
+@media (max-width: 520px) { .who-me { display: none } }
+
+.login { min-height: 100vh; display: grid; place-items: center; padding: 20px; background: var(--ink) }
+.login-card { width: 100%; max-width: 380px; padding: 26px 22px; display: grid; gap: 14px }
+.login-card label { display: grid; gap: 4px }
+.login-card input { font-size: 16px; padding: 11px 12px }
+.login .brand { justify-content: center; margin-bottom: 4px }
+.login .brand b { font-size: 26px }
+.err { background: var(--bad-soft); color: var(--bad); padding: 9px 11px; border-radius: 8px; font-size: 14px }
+
+.team input, .team select { min-width: 0 }
+.team .grid2 { display: grid; gap: 10px; grid-template-columns: 1fr }
+@media (min-width: 640px) { .team .grid2 { grid-template-columns: 1fr 1fr } }
+.team label { display: grid; gap: 3px }
+.team tr.off td { opacity: .5 }
+
+/* let wide tables scroll inside their card instead of stretching the page */
+.pane > *, .two > * { min-width: 0 }
